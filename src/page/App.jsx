@@ -1,6 +1,6 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Page1 } from "./week2/Components/Component";
+import { ContextPage, Page1 } from "./week2/Components/Component";
 import {
   ButtonComponent,
   ButtonComponentCss,
@@ -8,7 +8,9 @@ import {
 import styled from "styled-components";
 import IntroducePage from "./week2/P3/Introduce";
 import Calculator from "./week2/P4/Calculator";
+import { ReducerTest } from "./week2/Components/ReducerTest";
 
+// component 인수 예제
 // export default function App() {
 //   const name = "조건희";
 
@@ -22,20 +24,33 @@ import Calculator from "./week2/P4/Calculator";
 //   );
 // }
 
-// export default function App() {
-//   const data = {
-//     name: "조건희",
-//     department: "ICT융합학부",
-//     studentId: "202204133",
-//     major: "소프트웨어 전공",
-//     minor: "가상현실 전공",
-//     email: "rjsgml771@naver.com",
-//     interesting: ["Web", "Frontend", "Backend", "App", "React Native"],
-//   };
+// component 객체 전달 예제
+export function P3App() {
+  const data = {
+    name: "조건희",
+    department: "ICT융합학부",
+    studentId: "202204133",
+    major: "소프트웨어 전공",
+    minor: "가상현실 전공",
+    email: "rjsgml771@naver.com",
+    interesting: ["Web", "Frontend", "Backend", "App", "React Native"],
+  };
 
-//   return <IntroducePage props={data} />;
-// }
-
-export default function App() {
-  return <Calculator />;
+  return <IntroducePage props={data} />;
 }
+
+// reducer 예제
+export default function App() {
+  return <ReducerTest />;
+}
+
+// context 예제
+export const Context = React.createContext();
+
+// export default function App() {
+//   return (
+//     <Context.Provider value={{ name: "조건희" }}>
+//       <ContextPage />
+//     </Context.Provider>
+//   );
+// }
