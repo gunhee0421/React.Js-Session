@@ -8,11 +8,13 @@ import { Home } from "./page/week5/home";
 import Login from "./page/week5/Login";
 import { UserProvider } from "./context/UserContext";
 import User from "./page/week5/User";
-import App, { P3App } from "./page/App";
+import App from "./page/App";
 import SimplePage from "./page/week2/P1/SinglePage2";
 import P2 from "./page/week2/P2/P2";
-import IntroducePage from "./page/week2/P3/Introduce";
 import Calculator from "./page/week2/P4/Calculator";
+import { IntroducePage } from "./page/week2/P3/IntroducePage";
+import W3_P1 from "./page/week3/P1/P1";
+import W3_P2 from "./page/week3/P2/P2";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -25,8 +27,12 @@ root.render(
           <Route path="/week2/">
             <Route path="p1" element={<SimplePage />} />
             <Route path="p2" element={<P2 />} />
-            <Route path="p3" element={<P3App />} />
+            <Route path="p3" element={<IntroducePage />} />
             <Route path="p4" element={<Calculator />} />
+          </Route>
+          <Route path="/week3/">
+            <Route path="p1" element={<W3_P1 />} />
+            <Route path="p2" element={<W3_P2 />} />
           </Route>
           <Route path="/week5/">
             <Route path="home" element={<Home />} />

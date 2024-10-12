@@ -39,7 +39,7 @@ const InterestList = styled.ul`
   }
 `;
 
-const IntroducePage = (props) => {
+const Introduce = (props) => {
   return (
     <Container>
       <Title>Personal Profile</Title>
@@ -73,4 +73,4 @@ const IntroducePage = (props) => {
   );
 };
 
-export default IntroducePage;
+export default Introduce;

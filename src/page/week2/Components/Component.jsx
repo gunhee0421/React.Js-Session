@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "../../App";
+import { Context } from "../pages/ContextTest";
 
 export const Page1 = () => {
   return (
