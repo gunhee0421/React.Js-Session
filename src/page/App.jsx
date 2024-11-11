@@ -1,8 +1,16 @@
-import React from "react";
-import W3_P2 from "./week3/P2/P2";
-import EffectTest from "./week3/pages/EffectTest";
-import MemoTest from "./week3/pages/MemoTest";
+import React, { useState } from "react";
+import { Home } from "./week5/home";
+import Login from "./week5/Login";
+import User from "./week5/User";
 
 export default function App() {
-  return <MemoTest />;
+  const [index, setIndex] = useState(0);
+
+  return (
+    <div>
+      {index === 0 && <Home setIndex={setIndex} />}
+      {index === 1 && <Login setIndex={setIndex} />}
+      {index === 2 && <User setIndex={setIndex} />}
+    </div>
+  );
 }
